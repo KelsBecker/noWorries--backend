@@ -1,5 +1,5 @@
 class CategorySerializer < ActiveModel::Serializer
-  attributes :venue
+  attributes :id, :venue
 
   has_many :locations
 end
