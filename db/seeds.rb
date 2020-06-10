@@ -6,10 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Category.destroy_all
+Location.destroy_all
+Favorite.destroy_all
+
+
 u1 = User.create(username: 'kelzb', password: '123', email: 'klb@email.com')
+
+p 'user seeded'
 
 c1 = Category.create(venue: 'grocery')
 c2 = Category.create(venue: 'park')
+
+p 'category seeded'
 
 l1 = Location.create(category_id: c1.id, name: 'Trader Joes 2073 Broadway', latitude: 40.778519, longitude: -73.982338, weight: 1)
 l2 = Location.create(category_id: c1.id, name: 'Trader Joes 670 Columbus Ave', latitude: 40.790588, longitude: -73.969254, weight: 1)
@@ -18,11 +28,35 @@ l4 = Location.create(category_id: c1.id, name: 'Trader Joes 675 6th Ave' , latit
 l5 = Location.create(category_id: c1.id, name: 'Trader Joes 436 E 14th Street', latitude: 40.730580, longitude: -73.980890, weight: 1)
 l6 = Location.create(category_id: c1.id, name: 'Trader Joes 400 Grand Street', latitude: 40.716190, longitude: -73.987010, weight: 1)
 l7 = Location.create(category_id: c1.id, name: 'Trader Joes 233 Spring Street', latitude: 40.725910, longitude: -74.004753, weight: 1)
-l8 = Location.create(category_id: c2.id, name: 'Carl Schurz Park', latitude: 40.774960, longitude: -73.944801, weight: 1)
-l9 = Location.create(category_id: c2.id, name: 'Peter Detmold Park', latitude: 40.753208, longitude: -73.963997, weight: 1)
-l10 = Location.create(category_id: c2.id, name: 'John Jay Park', latitude: 40.765900, longitude: -73.951561, weight: 1)
+l8 = Location.create(category_id: c1.id, name: 'Fairway Market 240 East 86th Street', latitude: 40.777870, longitude: -73.952438, weight: 1)
+l9 = Location.create(category_id: c1.id, name: 'Fairway Market 2328 12th Ave', latitude: 40.819981, longitude: -73.958839, weight: 1)
+l10 = Location.create(category_id: c1.id, name: 'Fairway Market 2131 Broadway', latitude: 40.780891, longitude: -73.981888, weight: 1)
+l11 = Location.create(category_id: c1.id, name: 'Fairway Market 766 6th Ave', latitude: 40.744179, longitude: -73.991867, weight: 1)
+l12 = Location.create(category_id: c1.id, name: 'Fairway Market 550 2nd Ave', latitude: 40.742691, longitude: -73.976768, weight: 1)
+l13 = Location.create(category_id: c1.id, name: 'Whole Foods 270 Greenwich Street', latitude: 40.715630, longitude: -74.012108, weight: 1)
+l14 = Location.create(category_id: c1.id, name: 'Whole Foods 95 East Houston Street', latitude: 40.723461, longitude: -73.991898, weight: 1)
+l15 = Location.create(category_id: c1.id, name: 'Whole Foods 4 Union Square', latitude: 40.734770, longitude: -73.989750, weight: 1)
+l16 = Location.create(category_id: c1.id, name: 'Whole Foods 250 7th Ave', latitude: 40.745079, longitude: -73.995354, weight: 1)
+l17 = Location.create(category_id: c1.id, name: 'Whole Foods 1090 6th Ave', latitude: 40.754749, longitude: -73.985008, weight: 1)
+l18 =  Location.create(category_id: c1.id, name: 'Whole Foods 226 E 57th Street', latitude: 40.758968, longitude: -73.964508, weight: 1)
+l19 = Location.create(category_id: c1.id, name: 'Whole Foods 10 Columbus Circle', latitude: 40.768429, longitude: -73.983070, weight: 1)
+l20 = Location.create(category_id: c1.id, name: 'Whole Foods 1551 3rd Ave', latitude: 40.779621, longitude: -73.953178, weight: 1)
+l21 = Location.create(category_id: c1.id, name: 'Whole Foods 808 Columbus Ave', latitude: 40.793968, longitude: -73.967117, weight: 1)
+l22 = Location.create(category_id: c1.id, name: 'Whole Foods 100 W 125th Street', latitude: 40.807648, longitude: -73.946175, weight: 1)
+l23 = Location.create(category_id: c2.id, name: 'Carl Schurz Park', latitude: 40.774960, longitude: -73.944801, weight: 1)
+l24 = Location.create(category_id: c2.id, name: 'Peter Detmold Park', latitude: 40.753208, longitude: -73.963997, weight: 1)
+l25 = Location.create(category_id: c2.id, name: 'John Jay Park', latitude: 40.765900, longitude: -73.951561, weight: 1)
+l26 = Location.create(category_id: c2.id, name: 'Washington Square Park', latitude: 40.725010, longitude: -73.998299, weight: 1)
+l27 = Location.create(category_id: c2.id, name: 'Bryant Park', latitude: 40.753731, longitude: -73.989227, weight: 1)
+l28 = Location.create(category_id: c2.id, name: 'Dante Park', latitude: 40.771720, longitude: -73.982960, weight: 1)
+l29 = Location.create(category_id: c2.id, name: 'Theodore Roosevelt Park', latitude: 40.781170, longitude: -73.974022, weight: 1)
+l30 = Location.create(category_id: c2.id, name: 'Morningside Park', latitude: 40.801811, longitude: -73.961067, weight: 1)
+
+p 'listing seeded'
 
 f1 = Favorite.create(user_id: u1.id, location_id: l8.id)
 f1 = Favorite.create(user_id: u1.id, location_id: l5.id)
 f1 = Favorite.create(user_id: u1.id, location_id: l1.id)
-f1 = Favorite.create(user_id: u1.id, location_id: l10.id)
+
+p 'favorite seeded'
+p 'seeds planted Kelly :)'
