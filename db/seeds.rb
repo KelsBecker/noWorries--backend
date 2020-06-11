@@ -13,6 +13,7 @@ Favorite.destroy_all
 
 
 u1 = User.create(username: 'kelzb', password: '123', email: 'klb@email.com')
+u2 = User.create(username: 'schmitz', password: '123', email: 'js@email.com')
 
 p 'user seeded'
 
@@ -55,8 +56,9 @@ l30 = Location.create(category_id: c2.id, name: 'Morningside Park', address: 'Mo
 p 'listing seeded'
 
 f1 = Favorite.create(user_id: u1.id, location_id: l8.id)
-f1 = Favorite.create(user_id: u1.id, location_id: l5.id)
-f1 = Favorite.create(user_id: u1.id, location_id: l1.id)
+f2 = Favorite.create(user_id: u1.id, location_id: l5.id)
+f3 = Favorite.create(user_id: u1.id, location_id: l1.id)
+f4 = Favorite.create(user_id: u2.id, location_id: l8.id)
 
 p 'favorite seeded'
 p 'seeds planted Kelly :)'
