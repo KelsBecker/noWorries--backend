@@ -5,8 +5,19 @@ class FavoritesController < ApplicationController
         render json: favorites 
     end
 
+    def show 
+        favorite = Favorite.find(params[:id])
+        render json: favorite
+    end
+
     def create 
         favorite = Favorite.create(favoriteParams)
+        render json: favorite
+    end
+
+    def destroy 
+        favorite = Favorite.find(params[:id])
+        favorite.destroy
         render json: favorite
     end
 
