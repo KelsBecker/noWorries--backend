@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  nteger: MyString
+  lfavorite_id: 1
+  content: MyString
+
+two:
+  user_id: MyString
+  nteger: MyString
+  lfavorite_id: 1
+  content: MyString
