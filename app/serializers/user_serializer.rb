@@ -3,4 +3,5 @@ class UserSerializer < ActiveModel::Serializer
 
   has_many :favorites
   has_many :locations, through: :favorites
+  has_many :notes, through: :favorites
 end
