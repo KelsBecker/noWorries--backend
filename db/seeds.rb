@@ -10,6 +10,7 @@ User.destroy_all
 Category.destroy_all
 Location.destroy_all
 Favorite.destroy_all
+Note.destroy_all
 
 
 u1 = User.create(username: 'kelzb', password: '123', email: 'klb@email.com')
@@ -39,7 +40,7 @@ l14 = Location.create(category_id: c1.id, name: 'Whole Foods', address: '95 East
 l15 = Location.create(category_id: c1.id, name: 'Whole Foods', address: '4 Union Square', description: 'Eco-minded chain with natural and organic grocery items.', latitude: 40.734770, longitude: -73.989750, weight: 1)
 l16 = Location.create(category_id: c1.id, name: 'Whole Foods', address:  '250 7th Ave', description: 'Eco-minded chain with natural and organic grocery items.', latitude: 40.745079, longitude: -73.995354, weight: 1)
 l17 = Location.create(category_id: c1.id, name: 'Whole Foods', address: '1090 6th Ave', description: 'Eco-minded chain with natural and organic grocery items.', latitude: 40.754749, longitude: -73.985008, weight: 1)
-l18 =  Location.create(category_id: c1.id, name: 'Whole Foods', address: '226 E 57th Street', description: 'Eco-minded chain with natural and organic grocery items.', latitude: 40.758968, longitude: -73.964508, weight: 1)
+l18 = Location.create(category_id: c1.id, name: 'Whole Foods', address: '226 E 57th Street', description: 'Eco-minded chain with natural and organic grocery items.', latitude: 40.758968, longitude: -73.964508, weight: 1)
 l19 = Location.create(category_id: c1.id, name: 'Whole Foods', address: '10 Columbus Circle', description: 'Eco-minded chain with natural and organic grocery items.', latitude: 40.768429, longitude: -73.983070, weight: 1)
 l20 = Location.create(category_id: c1.id, name: 'Whole Foods', address: '1551 3rd Ave', description: 'Eco-minded chain with natural and organic grocery items.', latitude: 40.779621, longitude: -73.953178, weight: 1)
 l21 = Location.create(category_id: c1.id, name: 'Whole Foods', address: '808 Columbus Ave', description: 'Eco-minded chain with natural and organic grocery items.', latitude: 40.793968, longitude: -73.967117, weight: 1)
@@ -52,6 +53,16 @@ l27 = Location.create(category_id: c2.id, name: 'Bryant Park', address: '40th St
 l28 = Location.create(category_id: c2.id, name: 'Dante Park', address: 'Columbus Ave &, West 63rd Street', description: 'Pocket sized piece of land to sit and enjoy your lunch break.', latitude: 40.771720, longitude: -73.982960, weight: 1)
 l29 = Location.create(category_id: c2.id, name: 'Theodore Roosevelt Park', address: '200 Central Park West', description: 'Surrounds the American Museum of Natural History, with grassy areas and a dog run.', latitude: 40.781170, longitude: -73.974022, weight: 1)
 l30 = Location.create(category_id: c2.id, name: 'Morningside Park', address: 'Morningside Drive', description: 'Scenic park with dog-friendly areas and a weekly market.', latitude: 40.801811, longitude: -73.961067, weight: 1)
+l31 = Location.create(category_id: c2.id, name: 'The Great Lawn', address:'Central Park near East 85th Street', description: 'Grassy 55-acre section of Central Park, with several baseball fields.', latitude: 40.797260, longitude: -73.958980, weight: 1)
+l32 = Location.create(category_id: c2.id, name: 'Sheeps Meadow', address: 'Central Park near E 65th Street', description: 'Once grazed by sheep, this Central Park lawn is now a sunning and lounging locale with city views.', latitude: 40.766659, longitude: -73.967056, weight: 1)
+l33 = Location.create(category_id: c2.id, name: 'North Meadow', address: '102nd St Crossing', description: 'This 23-acre meadow, the largest in Central Park, features 7 baseball & 5 softball fields.', latitude: 40.790250, longitude: -73.949640, weight: 1)
+l34 = Location.create(category_id: c2.id, name: 'North Woods', address: '296 Central Park North', description: 'Wooded section of central park offering walking and biking paths.', latitude: 40.800360, longitude: -73.957620, weight: 1)
+l35 = Location.create(category_id: c2.id, name: 'Conservatory Garden', address: '1233 5th Ave, New York, NY 10029', description: 'Quiet, formal garden inside Central Park.', latitude: 40.792351, longitude: -73.952530, weight: 1)
+l36 = Location.create(category_id: c2.id, name: 'Riverside Park', address: 'Riverside Drive and West 101st Street', description: 'Storied multilevel park with elms & rocky outcrops.', latitude: 40.799140, longitude: -73.972520, weight: 1)
+l37 = Location.create(category_id: c2.id, name: 'Riverbank State Park', address: '679 Riverside Drive', description: '28-acre park with tons of facilities like pools, playgrounds, sports fields, and a skating rink.', latitude: 40.825451, longitude: -73.953697, weight: 1)
+l38 = Location.create(category_id: c2.id, name: 'Jackie Robinson Park', address: 'Bradhurst Avenue and, W 151st Street', description: 'Hilly, Wheelchair accessible', latitude: 40.827040, longitude: -73.940140, weight: 1)
+l39 = Location.create(category_id: c2.id, name: 'Battery Park', address: 'Battery Park Riverfront', description: 'Historic Park wit Ellis Island and Statue of Liberty views.', latitude: 40.704580, longitude: -74.014230, weight: 1)
+l40 = Location.create(category_id: c2.id, name: 'Columbus Park', address: 'Mulberry Street and, Baxter St', description: 'Historic neighborhood spot, among the cities oldest, with playground and basketball courts', latitude: 40.718770, longitude: -73.997570, weight: 1)
 
 p 'listing seeded'
 
@@ -61,4 +72,8 @@ f3 = Favorite.create(user_id: u1.id, location_id: l1.id)
 f4 = Favorite.create(user_id: u2.id, location_id: l8.id)
 
 p 'favorite seeded'
+
+n1 = Note.create(user_id: u1.id, favorite_id: f1.id, content: 'La Croix is in the basement')
+
+p 'note seeded'
 p 'seeds planted Kelly :)'
